@@ -5,11 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.amebaownd.pikohan_nwiatori.mvvm_temp.R
-import com.amebaownd.pikohan_nwiatori.mvvm_temp.add.AddFragmentDirections
-import kotlinx.android.synthetic.main.fragment_detail.*
-import kotlinx.android.synthetic.main.fragment_list.*
 
 class DetailFragment :Fragment(){
 
@@ -21,10 +17,5 @@ class DetailFragment :Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        goto_list.setOnClickListener {
-            val action = DetailFragmentDirections
-                .actionDetailFragmentToListFragment()
-            findNavController().navigate(action)
-        }
     }
 }
