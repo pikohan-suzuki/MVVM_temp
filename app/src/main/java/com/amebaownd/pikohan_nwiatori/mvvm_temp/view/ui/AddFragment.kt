@@ -33,29 +33,18 @@ class AddFragment :Fragment(){
         super.onViewCreated(view, savedInstanceState)
         endInsert()
         failedInsert()
-        viewModel.title.observe(this, Observer { viewModel.validation() })
+
     }
 
     private fun endInsert(){
-        viewModel.endInsert.observe(this,EventObserver{
-            if(it){
-                Toast.makeText(this.context,"タスクを追加しました。",Toast.LENGTH_LONG).show()
-                navigateToList()
-            }
-        })
+
     }
 
     private fun failedInsert(){
-        viewModel.failedInsert.observe(this,EventObserver{
-            if(it){
-                Toast.makeText(this.context,"タスクを追加できませんでした。",Toast.LENGTH_LONG).show()
-            }
-        })
+
     }
 
     private fun navigateToList(){
-        val action = AddFragmentDirections
-            .actionAddFragmentToListFragment()
-        findNavController().navigate(action)
+
     }
 }

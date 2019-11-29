@@ -15,7 +15,7 @@ import com.amebaownd.pikohan_nwiatori.mvvm_temp.viewModel.DetailViewModel
 
 class DetailFragment : Fragment(){
     private val viewModel : DetailViewModel by viewModels{getViewModelFactory()}
-    private val args : DetailFragmentArgs by navArgs()
+
     private lateinit var fragmentDetailBinding: FragmentDetailBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -29,7 +29,5 @@ class DetailFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val memoId = args.memoId
-        viewModel.start(memoId)
     }
 }

@@ -6,30 +6,13 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.amebaownd.pikohan_nwiatori.mvvm_temp.view.ui.ListFragment"
-        android:label="ListFragment" >
-        <action
-            android:id="@+id/action_listFragment_to_addFragment"
-            app:destination="@id/addFragment" />
-        <action
-            android:id="@+id/action_listFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
-    </fragment>
+        android:label="ListFragment" />
     <fragment
         android:id="@+id/addFragment"
         android:name="com.amebaownd.pikohan_nwiatori.mvvm_temp.view.ui.AddFragment"
-        android:label="AddFragment" >
-        <action
-            android:id="@+id/action_addFragment_to_listFragment"
-            app:destination="@id/listFragment"
-            app:popUpTo="@+id/listFragment"
-            app:popUpToInclusive="true" />
-    </fragment>
+        android:label="AddFragment" />
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.amebaownd.pikohan_nwiatori.mvvm_temp.view.ui.DetailFragment"
-        android:label="DetailFragment" >
-        <argument
-            android:name="memoId"
-            app:argType="string" />
-    </fragment>
+        android:label="DetailFragment" />
 </navigation>
