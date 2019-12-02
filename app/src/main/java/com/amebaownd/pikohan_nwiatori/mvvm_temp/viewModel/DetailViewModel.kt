@@ -18,10 +18,8 @@ class DetailViewModel(private val repository: MemoRepository) :ViewModel(){
     fun start(memoId:String){
         viewModelScope.launch(Dispatchers.IO){
             val memo = repository.getById(memoId)
-            if(memo!=null){
-                _title.postValue(memo.title)
-                _memo.postValue(memo.memo)
-            }
+            _title.postValue(memo.title)
+            _memo.postValue(memo.memo)
         }
     }
 }
