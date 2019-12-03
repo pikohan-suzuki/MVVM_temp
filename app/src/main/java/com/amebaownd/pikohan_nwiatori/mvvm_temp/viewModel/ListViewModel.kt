@@ -15,9 +15,6 @@ class ListViewModel(private val repository: MemoRepository) :ViewModel(){
     private var _allItems = MutableLiveData<List<Memo>>()
     val allItems :LiveData<List<Memo>> =_allItems
 
-    private var _openDetailEvent = MutableLiveData<Event<String>>(Event(""))
-    val openDetailEvent :LiveData<Event<String>> =_openDetailEvent
-
     private var _onAddEvent = MutableLiveData<Event<Boolean>>(Event(false))
     val onAddEvent : LiveData<Event<Boolean>> = _onAddEvent
 
@@ -31,7 +28,7 @@ class ListViewModel(private val repository: MemoRepository) :ViewModel(){
         _onAddEvent.value = Event(true)
     }
 
-    fun openDetail(memoId:String){
-        _openDetailEvent.value = Event(memoId)
+    fun openDetail(){
+
     }
 }

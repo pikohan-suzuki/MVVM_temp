@@ -37,11 +37,7 @@ class ListFragment : Fragment(){
                 navigateToAddFragment()
             }
         })
-        viewModel.openDetailEvent.observe(this,EventObserver{
-            if(it != ""){
-                navigateToDetailFragment(it)
-            }
-        })
+
     }
 
     private fun navigateToAddFragment(){
@@ -49,10 +45,8 @@ class ListFragment : Fragment(){
             .actionListFragmentToAddFragment()
         findNavController().navigate(action)
     }
-    private fun navigateToDetailFragment(memoId:String){
-        val action = ListFragmentDirections
-            .actionListFragmentToDetailFragment(memoId)
-        findNavController().navigate(action)
+    private fun navigateToDetailFragment(){
+
     }
 
     private fun setupRecyclerView(){
